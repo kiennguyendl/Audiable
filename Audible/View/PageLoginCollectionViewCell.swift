@@ -10,9 +10,10 @@ import UIKit
 
 class PageLoginCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var imgView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
 }

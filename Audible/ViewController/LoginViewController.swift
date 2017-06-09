@@ -15,8 +15,8 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = .red
-        collectionView.register(PageLoginCollectionViewCell.self, forCellWithReuseIdentifier: "CellID")
+        //collectionView.backgroundColor = .red
+        collectionView.register(UINib.init(nibName: "PageLoginCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CellID")
         // Do any additional setup after loading the view.
     }
 
@@ -26,8 +26,9 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellID", for: indexPath)
-        	cell.backgroundColor = .blue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellID", for: indexPath) as! PageLoginCollectionViewCell
+        //cell.backgroundColor = .white
+        cell.imgView.image = UIImage(named: "cat")
         return cell
     }
     

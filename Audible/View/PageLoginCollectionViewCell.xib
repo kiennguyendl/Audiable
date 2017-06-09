@@ -6,32 +6,48 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellID" id="gTV-IL-0wX" customClass="PageLoginCollectionViewCell" customModule="Audible" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="249" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="249" height="355"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="249" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="249" height="355"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JUx-aE-dnl">
-                        <rect key="frame" x="0.0" y="0.0" width="249" height="200"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="JUx-aE-dnl">
+                        <rect key="frame" x="0.0" y="0.0" width="249" height="236.5"/>
                     </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="sample text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YIR-ys-2Yv">
+                        <rect key="frame" x="0.0" y="236.5" width="249" height="118.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="JUx-aE-dnl" secondAttribute="trailing" id="7xY-ed-EaO"/>
-                <constraint firstItem="JUx-aE-dnl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Fd3-cg-5uI"/>
-                <constraint firstItem="JUx-aE-dnl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Qyd-Vi-itP"/>
-                <constraint firstAttribute="bottom" secondItem="JUx-aE-dnl" secondAttribute="bottom" id="qnL-4t-eBh"/>
+                <constraint firstItem="JUx-aE-dnl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HUW-QN-BpI"/>
+                <constraint firstAttribute="trailing" secondItem="JUx-aE-dnl" secondAttribute="trailing" id="Mrb-dh-cKR"/>
+                <constraint firstItem="YIR-ys-2Yv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UsS-MR-jyp"/>
+                <constraint firstItem="YIR-ys-2Yv" firstAttribute="top" secondItem="JUx-aE-dnl" secondAttribute="bottom" id="bJu-ro-aCr"/>
+                <constraint firstItem="JUx-aE-dnl" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="2:3" id="flP-4J-jV3"/>
+                <constraint firstAttribute="bottom" secondItem="YIR-ys-2Yv" secondAttribute="bottom" id="oDV-6Z-f5z"/>
+                <constraint firstItem="JUx-aE-dnl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ola-n4-XyM"/>
+                <constraint firstAttribute="trailing" secondItem="YIR-ys-2Yv" secondAttribute="trailing" id="uXw-HC-cxW"/>
             </constraints>
-            <size key="customSize" width="249" height="200"/>
-            <point key="canvasLocation" x="-60" y="39"/>
+            <size key="customSize" width="249" height="355"/>
+            <connections>
+                <outlet property="imgView" destination="JUx-aE-dnl" id="ov8-5X-cJx"/>
+            </connections>
+            <point key="canvasLocation" x="-60.5" y="13.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="cat" width="212" height="270"/>
+    </resources>
 </document>
